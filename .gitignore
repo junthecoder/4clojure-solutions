@@ -1,0 +1,19 @@
+# Clojure
+.cpcache/
+.lsp/
+.clj-kondo/
+target/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Recovery working files
+original-archive/
