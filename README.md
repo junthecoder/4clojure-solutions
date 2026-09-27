@@ -34,6 +34,32 @@ Each solution file contains the original submitted expression together with the 
     (reduce #(%1 %2) f xs)))
 ```
 
+## Solution Highlights
+
+### [#144 — Oscilrate](./solutions/144-oscilrate.clj)
+
+A compact infinite lazy sequence built by cycling through the supplied functions and accumulating the results with `reductions`:
+
+```clojure
+(fn [x & fs] (reductions #(%2 %1) x (cycle fs)))
+```
+
+### [#113 — Making Data Dance](./solutions/113-making-data-dance.clj)
+
+A small custom object implemented with `reify`, giving the same value different sequence and string representations:
+
+```clojure
+#(reify clojure.lang.Seqable
+   (toString [_] (clojure.string/join ", " (sort %&)))
+   (seq [_] (seq (distinct %&))))
+```
+
+### [#150 — Palindromic Numbers](./solutions/150-palindromic-numbers.clj)
+
+A lazy generator for arbitrarily large palindromic numbers. Rather than testing every integer for palindromicity, it constructs palindromes directly by mirroring their left halves.
+
+The implementation handles arbitrary-precision integers and generates an unbounded sequence beginning at a requested value.
+
 ## Recovery
 
 The original 4Clojure solutions archive contains anonymized MongoDB records.
