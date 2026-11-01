@@ -1,6 +1,6 @@
 # 4Clojure Solutions
 
-My solutions to the original [4Clojure](https://www.4clojure.com/) problem set.
+My solutions to the original [4Clojure problem set](https://4clojure.oxal.org/).
 
 I used 4Clojure under the username `lambda4fun`. After the original service shut down, I recovered my submitted solutions from the publicly released 4Clojure solutions archive.
 
